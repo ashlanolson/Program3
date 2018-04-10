@@ -1,8 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+Authors:Quenten Franc Jatkowski, Ashlan Elizabeth Olson.
+Date:04/10/2018
+Overview:Runs the 3 methods for minimun spanning tree reads in Input file from src named Input.txt
+Sources: 
+*/
 package programming.assignment.pkg3;
 
 import java.io.BufferedReader;
@@ -44,20 +45,20 @@ public class ProgrammingAssignment3 {
                         }
                         System.out.println(line);
                         p++;
-                        //line = line.replace("insert ", "");
-                        String[] nodesToInsert = line.split(",");
+                        String[] pathArray = line.split(",");
                         for(int s =0; s<6;s++)
                         {
-                            intToInsert[s] = Integer.parseInt(nodesToInsert[s]);
+                            intToInsert[s] = Integer.parseInt(pathArray[s]);
                         }
                         for(int q = 0; q<6; q++)
                         {
-                           inputArray[i][q]= Integer.parseInt(nodesToInsert[q]);  
+                           inputArray[i][q]= Integer.parseInt(pathArray[q]);  
                         }
                         i++;
-                        //int intToInsert = Integer.parseInt(nodesToInsert);
-                        //System.out.println(nodesToInsert);
                     }
+
+                    waffles.prim(inputArray);
+                    System.out.println();
                     for(int w = 0; w<6; w++)
                     {
                         for(int t = 0;t<6; t++)
@@ -66,7 +67,7 @@ public class ProgrammingAssignment3 {
                         }
                         System.out.println();
                     }
-                    waffles.prim(inputArray);
+                    waffles.floydWarshall(inputArray);
                 }
                catch (IOException x) {
 			System.err.format("IOException: %s%n", x);
