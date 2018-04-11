@@ -14,7 +14,7 @@ import java.nio.file.Path;
 
 /**
  *
- * @author Quenten Jatkowski
+ * @author Quenten Jatkowski and Ashlan Olson
  */
 public class ProgrammingAssignment3 {
 
